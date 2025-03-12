@@ -1,4 +1,4 @@
 # disco
 🪩
 
-[cold emails](cold-emails.html)
+[cold emails](https://disco.lilie.link/cold-emails.html)
