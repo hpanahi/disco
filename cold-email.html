@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco - Cold Email Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rice: {
+                            blue: '#4069B0',
+                            gold: '#EAB245',
+                            white: '#FEFDFE'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['IBM Plex Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+        
+        .quote-mark {
+            font-size: 5rem;
+            line-height: 1;
+            height: 40px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body class="bg-rice-blue font-mono text-rice-white">
+    <header class="bg-rice-blue text-rice-white py-12 border-b border-rice-white/20">
+        <div class="container mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Cold Email Testimonials</h1>
+            <h2 class="text-xl md:text-2xl font-light">Disco</h2>
+            <p class="mt-4 max-w-2xl">Past Disco-ers share their experiences with cold emailing - what surprised them, what changed their perspective, and what they learned that they wouldn't have otherwise.</p>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 md:px-6 py-10">
+        <!-- Filter section -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-rice-white">Filter Stories</h2>
+            <div class="flex flex-wrap gap-2">
+                <button class="filter-btn bg-rice-gold text-rice-blue px-4 py-2 rounded hover:bg-opacity-90 active" data-filter="all">All Stories</button>
+                <button class="filter-btn bg-rice-white/20 text-rice-white px-4 py-2 rounded hover:bg-rice-white/30" data-filter="Surprises">Surprises</button>
+                <button class="filter-btn bg-rice-white/20 text-rice-white px-4 py-2 rounded hover:bg-rice-white/30" data-filter="Perspective">Perspective Changes</button>
+                <button class="filter-btn bg-rice-white/20 text-rice-white px-4 py-2 rounded hover:bg-rice-white/30" data-filter="Learning">Learnings</button>
+                <button class="filter-btn bg-rice-white/20 text-rice-white px-4 py-2 rounded hover:bg-rice-white/30" data-filter="Career">Career Insights</button>
+                <button class="filter-btn bg-rice-white/20 text-rice-white px-4 py-2 rounded hover:bg-rice-white/30" data-filter="Networking">Networking</button>
+            </div>
+        </div>
+
+        <!-- Testimonials grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 testimonials-container">
+            <!-- Testimonial 1: Jason -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card" 
+                 data-categories="Surprises Learning Career Networking">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">Cold emailing is an essential professional skill that everyone should learn. I love the saying, "You miss 100% of the shots you don't take," and it applies perfectly here. What surprised me most was how willing professionals, especially Rice alums, are to speak with undergraduates—especially when you're working on something interesting.</p>
+                    <p class="text-rice-white mb-4">During the cold email exercise in BUSI 221, I connected with a few Rice graduates and learned about job opportunities I didn't even know existed. After the course, my team used cold emailing to reach out to surgeons for an engineering project, and we got some really great responses and feedback.</p>
+                    <p class="text-rice-white">We even had the chance to observe a kidney transplant surgery at Houston Methodist, explore medical engineering technologies, and are currently in process of bringing on a transplant surgeon as our medical advisor. Cold emailing might not seem immediately impactful during the course, but it's a skill you'll use often and find highly effective in the long run.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Jason</p>
+                    <p class="text-sm text-rice-white">Cohort 1</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2: Mike -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Perspective Learning Networking">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">I started off the cold email grind trying to send as many as possible, but I quickly realized that I was not going to get the responses I needed in time. Instead, I focused on reaching out to people I either had a mutual connection with or shared something in common.</p>
+                    <p class="text-rice-white mb-4">Since I've been using a Boosted Board (electric skateboard) for years, I decided to email the founder, sharing how the product had impacted my daily life and asking for advice on breaking into his industry. To my surprise, he responded, appreciated my enthusiasm, and agreed to get on a call.</p>
+                    <p class="text-rice-white">After an insightful conversation, he offered to be a resource to me in the future and gave me his personal contact information. With so many cold emails flooding inboxes, the key is to write with genuine intent—reach out to people with whom you have a real connection or a compelling reason to start a conversation.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Mike</p>
+                    <p class="text-sm text-rice-white">Cohort 1</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3: Lana -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Perspective Career Learning">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">I cold emailed about a career I was interested in, and two of the people I interviewed had vastly different opinions and perspectives. One interviewee really enjoyed the job, while the other spoke very negatively about it.</p>
+                    <p class="text-rice-white mb-4">Although, their perspectives differed because they were at very different stages in life when considering/entering this job. As a result, this was a very insightful interview because aspects of whether the job could be right for someone depends on more than just the job itself, which is not something I considered.</p>
+                    <p class="text-rice-white">Doing the interviews ultimately opened up many perspectives that I would have otherwise never known.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Lana</p>
+                    <p class="text-sm text-rice-white">Cohort 2</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 4: Cory -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Surprises Learning Career">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">I remember when we first were given the cold email assignment, I was very fearful of getting rejected and ignored by those I reached out to. After my first few emails with no response, I was really nervous that I wasn't going to meet the interview threshold.</p>
+                    <p class="text-rice-white mb-4">However, after my first interview with a Rice senior, she connected me to a MIT PhD student, and from there, the interviews just kept building upon each other. From the interviews, I learned a lot about how my interests could translate into future career prospects.</p>
+                    <p class="text-rice-white">Even after Disco, I have found the skill of cold emailing extremely useful in my other academic prospects. This summer, I'm attempting to get a study abroad research scholarship, and I'm currently having to perform the "daunting" task of cold emailing professors in a foreign country. Due to Disco teaching me how to properly cold email, I've already received multiple responses from professors, and I'm sure this will be a skill I take with me long into the future.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Cory</p>
+                    <p class="text-sm text-rice-white">Cohort 2</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 5: Jackson -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Networking Learning">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">At first, I felt intimidated by the idea of cold-emailing people for Disco and was nervous about reaching out to random people. Initially, I didn't receive many responses, likely because I wasn't sending enough emails.</p>
+                    <p class="text-rice-white mb-4">However, once I increased the volume of emails, I started getting more replies. During my coffee chats, some of the people I spoke with referred me to others with similar interests.</p>
+                    <p class="text-rice-white">This was valuable later on when conducting customer discovery interviews in New Enterprises, as I was able to reconnect with those referrals and expand my outreach.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Jackson</p>
+                    <p class="text-sm text-rice-white">Cohort 2</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 6: Alhena -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Surprises Perspective Networking Learning">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">Cold emailing people about augmented reality—a space I initially knew nothing about—was surprisingly rewarding. I was amazed by how willing people were to explain concepts, connect me with others, and share similar ideas or considerations.</p>
+                    <p class="text-rice-white mb-4">Beyond just providing information, many encouraged me, highlighted the potential of my ideas, and motivated me to keep exploring. It changed my perspective on cold emailing, showing me that people are often eager to help if you take the initiative to reach out even if you are not the smartest or most experienced person in the world.</p>
+                    <p class="text-rice-white">As a finance major, and a student athlete, I had a little to offer but honestly was about to learn about unique facets in the space, similar ideas, and even expand my network beyond my inital cold email.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Alhena</p>
+                    <p class="text-sm text-rice-white">Cohort 1</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 7: Matthew -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Surprises Learning Networking">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">At the start of the class, I was definitely one of the people who underestimated just how many emails I would need to send. I remember Hesam telling us that by this point, we should have sent around fifty emails, while I had only sent about ten and was still expecting a response.</p>
+                    <p class="text-rice-white mb-4">In the end, I sent around seventy and received maybe five replies. Among them was the marketing head at Boston Dynamics and Rugged Robotics CEO Derrick Morse: I had the pleasure of speaking with him for about half an hour, and he was particularly impressed by the cold email technique.</p>
+                    <p class="text-rice-white">I learned a lot about the industry from our conversation, and he even tried to connect me with his co-founder, who had ties to Rice.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Matthew</p>
+                    <p class="text-sm text-rice-white">Cohort 2</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 8: Maya -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Networking Career">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">To learn more about the preventative health industry, I took a chance and contacted a bunch of key leaders in the space. I was able to talk to people like Tom Hale, the CEO of Oura Ring, Josh Clemente, the founder of Levels, Renee Deehan, Senior Vice President at InsideTracker, among others.</p>
+                    <p class="text-rice-white">I also reached out to some people at Rice's Recreation Center to chat about their perspectives and because of our shared interests, they created a new student job for me as a Digital Health Coordinator.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Maya</p>
+                    <p class="text-sm text-rice-white">Cohort 1</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 9: Eric (Anonymous) -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Learning Career">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">Cold emailing felt nerve-wracking at first. However, BUSI 221 has really taught me how to be confident and precise in my emails. I think out of all the skills that 221 has taught me, cold-emailing was one of the most valuable.</p>
+                    <p class="text-rice-white mb-4">I met another 221 alumnus the other week and he echoed the same sentiment. I am currently thinking of starting another business, and cold emailing will prove integral to my success.</p>
+                    <p class="text-rice-white">Cold emailing has brought me opportunities to speak to some very skilled people in their industry, and often times for extended periods of time -- I got to speak to a very, very skilled photographer for an hour! Lastly, remember to politely follow-up (checking up on something) after a few days if they don't respond.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Anonymous Student</p>
+                    <p class="text-sm text-rice-white">Cohort 2</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 10: Ana -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full testimonial-card"
+                 data-categories="Surprises Learning Networking Career">
+                <div class="p-6 flex-grow bg-rice-blue">
+                    <div class="quote-mark text-rice-gold">"</div>
+                    <p class="text-rice-white mb-4">One of the most surprising outcomes from cold emailing was receiving a response from Martín Casado and having the opportunity to speak with him. Casado is a General Partner at Andreessen Horowitz and a pioneer in software-defined networking. I had recently watched an interview he conducted with Mira Murati, who was the CTO of OpenAI. That conversation made me curious about his perspective on building and scaling technical products.</p>
+                    <p class="text-rice-white mb-4">As someone interested in both computer science and entrepreneurship, I wanted to understand how technical founders navigate the transition from building innovative products to creating successful companies. One key takeaway from our conversation was the importance of timing in startups and solving real business problems. He explained that even the best ideas can struggle if the market isn't ready for them, while sometimes a simple idea succeeds because external conditions align at the right moment.</p>
+                    <p class="text-rice-white mb-4">So it's not just about having a great product, but also about recognizing the right go-to-market strategy, and in some cases, the right timing. I also remember discussing his routine and his emphasis on deep focus and structure. Casado spoke about how he values structuring his days to maximize focus and eliminate distractions, which allows him to engage with complex problems.</p>
+                    <p class="text-rice-white">The most difficult part of cold emailing is often getting a response, so it's essential to craft a message that stands out. Despite this challenge, it can lead to valuable conversations, new insights, and unexpected opportunities.</p>
+                </div>
+                <div class="bg-rice-blue p-4 border-t border-rice-white/20">
+                    <p class="font-semibold text-rice-gold">Ana</p>
+                    <p class="text-sm text-rice-white">Cohort 1</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Insights Section -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-semibold mb-6 text-rice-white">Key Insights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">People are surprisingly willing to help</h3>
+                    <p class="text-rice-white">Many Disco-ers were amazed by how willing professionals were to respond and share their knowledge, especially when approached with genuine interest.</p>
+                </div>
+                
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">Cold emailing is a numbers game</h3>
+                    <p class="text-rice-white">Disco-ers who sent more emails received more responses. Persistence pays off, but quality and personalization matter too.</p>
+                </div>
+                
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">Snowball networking effect</h3>
+                    <p class="text-rice-white">One successful connection often leads to more. Many Disco-ers found that their initial contacts would refer them to other valuable connections.</p>
+                </div>
+                
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">Career-changing opportunities</h3>
+                    <p class="text-rice-white">Cold emails led to unexpected opportunities like job offers, industry insights, and even unique experiences like observing surgeries or meeting industry leaders.</p>
+                </div>
+                
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">Authenticity matters</h3>
+                    <p class="text-rice-white">Genuine interest and personal connections make cold emails more effective. Finding common ground or shared interests increases response rates.</p>
+                </div>
+                
+                <div class="bg-rice-blue rounded-lg p-6 shadow-md border-2 border-rice-gold">
+                    <div class="text-3xl text-rice-gold mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-rice-gold">Lifelong valuable skill</h3>
+                    <p class="text-rice-white">Disco-ers continue to use cold emailing skills long after the course ends, applying them to research, business ventures, and other academic pursuits.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <footer class="bg-rice-blue text-rice-white py-8 border-t border-rice-white/20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-semibold text-rice-gold">Rice University</h3>
+                    <p class="text-rice-white">Liu Idea Lab for Innovation and Entrepreneurship</p>
+                </div>
+                <div>
+                    <p>&copy; 2025 Rice University. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-rice-gold', 'text-rice-blue');
+                        b.classList.add('bg-rice-white/20', 'text-rice-white');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.remove('bg-rice-white/20', 'text-rice-white');
+                    this.classList.add('active', 'bg-rice-gold', 'text-rice-blue');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    testimonialCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'flex';
+                        } else {
+                            const categories = card.dataset.categories.split(' ');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
