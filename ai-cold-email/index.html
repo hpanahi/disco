@@ -62,7 +62,7 @@
         <div class="container mx-auto px-4 md:px-6 max-w-5xl">
             <h1 class="text-3xl md:text-4xl font-bold mb-2">Using AI to Research People for Coffee Chats</h1>
             <h2 class="text-xl md:text-2xl font-light mb-4">New Enterprises: Discovery (Disco)</h2>
-            <p class="mt-4 max-w-3xl">A practical guide for Disco students on using AI tools (ChatGPT, Claude, or Gemini) to research people before sending cold emails. Includes copy-paste prompts to help you find the right people, research them deeply, and write personalized outreach.</p>
+            <p class="mt-4 max-w-3xl">A practical guide for Disco students on using AI tools (ChatGPT, Claude, or Gemini) to research people before sending cold emails for your possibility statements. Includes copy-paste prompts to help you find the right people, research them deeply, and write personalized outreach.</p>
         </div>
     </header>
 
@@ -87,9 +87,23 @@
         <section id="why-this-guide" class="mb-12">
             <h2 class="text-3xl font-bold mb-6 text-rice-gold">Why This Guide?</h2>
             <div class="bg-rice-white/10 rounded-lg p-6 space-y-4">
-                <p>You've drafted your possibility statement. Now it's time to find people who can help you test it.</p>
-                <p>The goal isn't to email everyone in an industry - it's to find 2-3 people per possibility statement who can give you specific, ungoogleable insights. This guide shows you how to use AI tools to research people deeply so you can write cold emails that actually get responses.</p>
-                <p class="font-semibold text-rice-gold">Remember: Coffee chats aren't about asking people to hire you or validate your idea. They're about understanding whether your possibility statement is grounded in reality. The better your research, the better your questions, the better your conversations.</p>
+                <h3 class="text-xl font-semibold text-rice-gold">Understanding Possibility Statements</h3>
+                <p>In Disco, you're exploring two possibility statements - guesses about potential futures you might pursue. A possibility statement has three parts:</p>
+                <div class="bg-rice-blue border-l-4 border-rice-gold p-4 my-4">
+                    <p class="italic">"I will provide my ability to <strong>________</strong> (the what - what value you'll provide) so that I can help <strong>________</strong> (the who - the people you want to help) because <strong>________</strong> (the why - the reason you want to help and/or the outcome you want them to achieve)"</p>
+                </div>
+
+                <h4 class="font-semibold text-rice-gold mt-4">Your Two Possibility Statements:</h4>
+                <ul class="list-none space-y-2 ml-4">
+                    <li><strong>🎓 Most Feasible:</strong> The one you would choose if you had to decide tomorrow. The most sensible and possible path.</li>
+                    <li><strong>🚀 Most Revolutionary:</strong> The one that makes your heart sing - maybe a hobby or passion you don't know how to turn into a future. Exciting, even if it seems unattainable.</li>
+                </ul>
+
+                <p class="font-semibold text-rice-gold mt-4">Here's the key: These are starting points, not final decisions. You may not even know if these possibilities are possible! That's okay - you'll do research to find out.</p>
+
+                <p>The goal isn't to email everyone in an industry - it's to find 2 people per possibility statement (4 total) who can give you specific, ungoogleable insights about whether your guess is grounded in reality. This guide shows you how to use AI tools to research people deeply so you can write cold emails that actually get responses.</p>
+
+                <p class="font-semibold text-rice-gold">Remember: Coffee chats aren't about asking people to hire you or validate your idea. They're about testing your possibility statement through real conversations. The better your research, the better your questions, the better your conversations.</p>
 
                 <div class="bg-rice-blue border-l-4 border-rice-gold p-4 mt-4">
                     <p class="font-semibold mb-2 text-rice-gold"><i class="fas fa-robot mr-2"></i>Which AI Tool to Use?</p>
@@ -139,11 +153,12 @@
                         <button onclick="copyPrompt('prompt-1', 'copy-indicator-1')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
                             <i class="fas fa-copy mr-1"></i> Copy
                         </button>
-                        <pre id="prompt-1" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement for a career path:
+                        <pre id="prompt-1" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement. This is a guess about a future I might pursue - I'm not sure yet if it's even possible, but I want to research it.
 
-WHO: [Who you want to serve/work with]
-WHAT: [Skills you want to provide or role you want to have]
-WHY: [Benefits and outcomes you hope to create]
+My possibility statement:
+WHO: [Who you want to serve/work with - be specific: "non profits focused on financial literacy" not just "non profits"]
+WHAT: [Skills you want to provide - be specific: "advanced machine learning algorithms" not just "software engineering"]
+WHY: [Benefits and outcomes - be specific: "maintain soil fertility and sustain long-term agricultural productivity" not just "save the planet"]
 
 Can you suggest 5-7 types of job titles or roles I should look for on LinkedIn?
 For each, explain:
@@ -162,11 +177,12 @@ Please search the web for current information about these roles.</pre>
                         <button onclick="copyPrompt('prompt-2', 'copy-indicator-2')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
                             <i class="fas fa-copy mr-1"></i> Copy
                         </button>
-                        <pre id="prompt-2" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement for a career path:
+                        <pre id="prompt-2" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement. This is a guess about a future I might pursue - I'm not sure yet if it's even possible, but I want to research it.
 
+My possibility statement:
 WHO: People in underserved communities who need better access to financial services
-WHAT: User experience design and research skills
-WHY: To help people build financial stability and confidence
+WHAT: User experience design and research skills for fintech products
+WHY: To help people build financial stability and confidence through better-designed financial tools
 
 Can you suggest 5-7 types of job titles or roles I should look for on LinkedIn?
 For each, explain:
@@ -201,7 +217,10 @@ Please search the web for current information about these roles.</pre>
                                 <i class="fas fa-copy mr-1"></i> Copy
                             </button>
                             <pre id="prompt-3" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I need to research [Person's Full Name] who works as [Job Title] at [Company]
-before sending them a cold email about my possibility statement.
+before sending them a cold email.
+
+I'm exploring a possibility statement (a guess about a potential future path).
+I want to talk to them to see if this possibility is grounded in reality.
 
 My possibility statement:
 WHO: [Who you want to serve/work with]
