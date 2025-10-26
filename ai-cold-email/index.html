@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using ChatGPT to Research People for Coffee Chats - Disco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rice: {
+                            blue: '#4069B0',
+                            gold: '#EAB245',
+                            white: '#FEFDFE'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['IBM Plex Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+        .copy-btn {
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .prompt-box {
+            position: relative;
+        }
+
+        .copied-indicator {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .copied-indicator.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-rice-blue font-mono text-rice-white">
+    <header class="bg-rice-blue text-rice-white py-12 border-b border-rice-white/20">
+        <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Using ChatGPT to Research People for Coffee Chats</h1>
+            <h2 class="text-xl md:text-2xl font-light mb-4">New Enterprises: Discovery (Disco)</h2>
+            <p class="mt-4 max-w-3xl">A practical guide for Disco students on using ChatGPT Plus to research people before sending cold emails. Includes copy-paste prompts to help you find the right people, research them deeply, and write personalized outreach.</p>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 md:px-6 py-10 max-w-5xl">
+
+        <!-- Quick Nav -->
+        <div class="bg-rice-blue border-2 border-rice-gold rounded-lg p-6 mb-10">
+            <h3 class="text-xl font-semibold mb-4 text-rice-gold">Jump to Section</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                <a href="#why-this-guide" class="text-rice-white hover:text-rice-gold">→ Why This Guide?</a>
+                <a href="#finding-people" class="text-rice-white hover:text-rice-gold">→ Part 1: Finding People</a>
+                <a href="#research-deeply" class="text-rice-white hover:text-rice-gold">→ Part 2: Research Deeply</a>
+                <a href="#to-email" class="text-rice-white hover:text-rice-gold">→ Part 3: Research to Email</a>
+                <a href="#quick-workflow" class="text-rice-white hover:text-rice-gold">→ 30-Minute Workflow</a>
+                <a href="#checklist" class="text-rice-white hover:text-rice-gold">→ Research Checklist</a>
+                <a href="#examples" class="text-rice-white hover:text-rice-gold">→ Example Scenarios</a>
+                <a href="#troubleshooting" class="text-rice-white hover:text-rice-gold">→ Troubleshooting</a>
+            </div>
+        </div>
+
+        <!-- Why This Guide Section -->
+        <section id="why-this-guide" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Why This Guide?</h2>
+            <div class="bg-rice-white/10 rounded-lg p-6 space-y-4">
+                <p>You've drafted your possibility statement. Now it's time to find people who can help you test it.</p>
+                <p>The goal isn't to email everyone in an industry - it's to find 2-3 people per possibility statement who can give you specific, ungoogleable insights. This guide shows you how to use ChatGPT (paid version with web search) to research people deeply so you can write cold emails that actually get responses.</p>
+                <p class="font-semibold text-rice-gold">Remember: Coffee chats aren't about asking people to hire you or validate your idea. They're about understanding whether your possibility statement is grounded in reality. The better your research, the better your questions, the better your conversations.</p>
+
+                <div class="bg-rice-blue border-l-4 border-rice-gold p-4 mt-4">
+                    <p class="font-semibold mb-2">Use this guide:</p>
+                    <ul class="list-disc list-inside space-y-1 ml-4">
+                        <li>AFTER you've drafted your possibility statement</li>
+                        <li>BEFORE you write your cold email</li>
+                        <li>ALONGSIDE the Coffee Chat Guide and How to Prepare for Your Chats</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 1: Finding People -->
+        <section id="finding-people" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Part 1: Finding People to Research</h2>
+
+            <div class="space-y-6">
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-rice-gold">Start with LinkedIn and Your Network</h3>
+                    <p class="mb-4">Before diving into ChatGPT, start with the basics:</p>
+                    <ol class="list-decimal list-inside space-y-2 ml-4">
+                        <li><strong>LinkedIn search:</strong> Look for job titles, companies, and industries related to your possibility statement</li>
+                        <li><strong>Rice connections:</strong> Filter for Rice alumni (they're more likely to respond)</li>
+                        <li><strong>Your network:</strong> Ask professors, TAs, friends, and family for introductions</li>
+                        <li><strong>Pitchbook</strong> (if exploring startups): Research companies in your space</li>
+                    </ol>
+                    <p class="mt-4 text-rice-gold font-semibold">Goal: Create a shortlist of 5-10 potential people to research more deeply.</p>
+                </div>
+
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-rice-gold">Using ChatGPT to Find People (Optional)</h3>
+                    <p class="mb-4">If you're stuck finding the right people, ChatGPT can help. Here's a copy-paste prompt:</p>
+
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-1">Copied!</div>
+                        <button onclick="copyPrompt('prompt-1', 'copy-indicator-1')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                            <i class="fas fa-copy mr-1"></i> Copy
+                        </button>
+                        <pre id="prompt-1" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement for a career path:
+
+WHO: [Who you want to serve/work with]
+WHAT: [Skills you want to provide or role you want to have]
+WHY: [Benefits and outcomes you hope to create]
+
+Can you suggest 5-7 types of job titles or roles I should look for on LinkedIn?
+For each, explain:
+1. Why this role might be relevant to my possibility statement
+2. What level of seniority would be best to contact (entry-level, mid-career, senior)
+3. What industries or companies to prioritize
+
+Please search the web for current information about these roles.</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-blue border-2 border-rice-gold rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold"><i class="fas fa-lightbulb mr-2"></i>Example (Career Path)</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-2">Copied!</div>
+                        <button onclick="copyPrompt('prompt-2', 'copy-indicator-2')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                            <i class="fas fa-copy mr-1"></i> Copy
+                        </button>
+                        <pre id="prompt-2" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm a Rice University student exploring a possibility statement for a career path:
+
+WHO: People in underserved communities who need better access to financial services
+WHAT: User experience design and research skills
+WHY: To help people build financial stability and confidence
+
+Can you suggest 5-7 types of job titles or roles I should look for on LinkedIn?
+For each, explain:
+1. Why this role might be relevant to my possibility statement
+2. What level of seniority would be best to contact (entry-level, mid-career, senior)
+3. What industries or companies to prioritize
+
+Please search the web for current information about these roles.</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: Research Deeply -->
+        <section id="research-deeply" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Part 2: Researching People Deeply (The Core Work)</h2>
+            <p class="mb-6">This is where ChatGPT with web search really shines. Once you have names from LinkedIn, use these prompts to research each person thoroughly.</p>
+
+            <div class="space-y-8">
+                <!-- Stage 1 -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-rice-gold">Stage 1: Initial Discovery (Cast a Wide Net)</h3>
+                    <div class="bg-rice-white/10 rounded-lg p-6">
+                        <p class="mb-4 font-semibold">Copy-Paste Prompt Template:</p>
+                        <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                            <div class="copied-indicator" id="copy-indicator-3">Copied!</div>
+                            <button onclick="copyPrompt('prompt-3', 'copy-indicator-3')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                                <i class="fas fa-copy mr-1"></i> Copy
+                            </button>
+                            <pre id="prompt-3" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I need to research [Person's Full Name] who works as [Job Title] at [Company]
+before sending them a cold email about my possibility statement.
+
+My possibility statement:
+WHO: [Who you want to serve/work with]
+WHAT: [Skills you want to provide/role you want to have]
+WHY: [Benefits and outcomes you hope to create]
+
+Please search the web and help me find:
+1. Their current role and recent work (last 6-12 months)
+2. Their professional background and career path
+3. What they're interested in or care about professionally
+4. Recent articles, talks, podcasts, or projects they've been involved in
+5. Any public writing (blog posts, LinkedIn articles, Twitter/X posts, Substack)
+6. Whether they have any connection to Rice University
+
+Focus on information from the last 6-12 months - recent activity is most valuable.</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-rice-gold">Stage 2: Deep Dive (Find Connection Points)</h3>
+                    <p class="mb-4">Once ChatGPT returns initial results, use these follow-up prompts to dig deeper.</p>
+
+                    <div class="space-y-6">
+                        <div class="bg-rice-white/10 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold mb-3 text-rice-gold">Finding Themes</h4>
+                            <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                                <div class="copied-indicator" id="copy-indicator-4">Copied!</div>
+                                <button onclick="copyPrompt('prompt-4', 'copy-indicator-4')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                                    <i class="fas fa-copy mr-1"></i> Copy
+                                </button>
+                                <pre id="prompt-4" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">Based on what you found about [Person's Name], what are the 3-5 main themes
+or topics they consistently care about? What patterns do you see in their work?
+
+Give me specific examples of where you see these themes (link to articles,
+posts, or talks if possible).</pre>
+                            </div>
+                        </div>
+
+                        <div class="bg-rice-white/10 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold mb-3 text-rice-gold">Finding Your Connection Points</h4>
+                            <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                                <div class="copied-indicator" id="copy-indicator-5">Copied!</div>
+                                <button onclick="copyPrompt('prompt-5', 'copy-indicator-5')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                                    <i class="fas fa-copy mr-1"></i> Copy
+                                </button>
+                                <pre id="prompt-5" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">Here's more about my background and interests:
+- Major/Year: [Your major and year at Rice]
+- Relevant experience: [Any internships, projects, coursework]
+- Skills I'm developing: [Specific skills]
+- What excites me: [What genuinely interests you about this path]
+
+Based on what you know about [Person's Name], what are 3-5 specific connection
+points between my interests/background and theirs?
+
+Where might we have common ground? What could I mention in a cold email that
+shows I've done my homework?</pre>
+                            </div>
+                        </div>
+
+                        <div class="bg-rice-white/10 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold mb-3 text-rice-gold">Validating This Is the RIGHT Person</h4>
+                            <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                                <div class="copied-indicator" id="copy-indicator-6">Copied!</div>
+                                <button onclick="copyPrompt('prompt-6', 'copy-indicator-6')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                                    <i class="fas fa-copy mr-1"></i> Copy
+                                </button>
+                                <pre id="prompt-6" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I'm trying to decide whether [Person's Name] is the right person to contact
+for a coffee chat. Based on your research:
+
+1. Are they actively working on problems related to my possibility statement?
+2. Is their seniority level appropriate? (I want someone who will have time
+   to chat and remembers what it's like to be exploring career paths)
+3. Have they shown interest in mentoring, speaking with students, or sharing
+   their experience publicly?
+4. Are there any red flags? (Just changed jobs, on leave, publicly said
+   they're overwhelmed, etc.)
+
+Should I contact this person, or should I look for someone else?</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-rice-gold">Stage 3: Synthesis (Prepare for the Email)</h3>
+                    <p class="mb-4">After researching 2-3 people, use this prompt to create a summary:</p>
+                    <div class="bg-rice-white/10 rounded-lg p-6">
+                        <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                            <div class="copied-indicator" id="copy-indicator-7">Copied!</div>
+                            <button onclick="copyPrompt('prompt-7', 'copy-indicator-7')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-3 py-1 rounded text-sm font-semibold hover:bg-rice-gold/90">
+                                <i class="fas fa-copy mr-1"></i> Copy
+                            </button>
+                            <pre id="prompt-7" class="text-gray-100 text-sm overflow-x-auto whitespace-pre-wrap pr-20">I've researched [Person's Name] and I'm ready to write a cold email.
+
+Create a one-page research summary that includes:
+
+1. **Quick Facts**: Current role, company, key expertise
+2. **Recent Focus**: What they're working on RIGHT NOW (last 3-6 months)
+3. **Connection Points**: 2-3 specific things I should mention that show I
+   understand their work
+4. **Conversation Starters**: 2-3 recent things they did (articles, talks,
+   projects) that I could reference
+5. **Best Approach**: Based on their communication style and public presence,
+   what tone should I use in my email? (Formal? Casual? Specific question-focused?)
+
+Make this actionable - I should be able to use this summary to write a
+personalized cold email in 10 minutes.</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Research to Email -->
+        <section id="to-email" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Part 3: From Research to Cold Email</h2>
+
+            <div class="bg-rice-white/10 rounded-lg p-6 space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-rice-gold">Using Your Research Effectively</h3>
+                    <p class="mb-3">Your ChatGPT research should inform THREE parts of your cold email:</p>
+                    <ol class="list-decimal list-inside space-y-2 ml-4">
+                        <li><strong>The opening</strong> - Show you know who they are</li>
+                        <li><strong>The connection</strong> - Explain why you're reaching out to them specifically</li>
+                        <li><strong>The ask</strong> - Make it relevant to their expertise</li>
+                    </ol>
+                </div>
+
+                <div class="bg-rice-blue border-2 border-rice-gold rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Example: Research → Email</h4>
+
+                    <div class="mb-4">
+                        <p class="font-semibold mb-2">What ChatGPT Found:</p>
+                        <ul class="list-disc list-inside space-y-1 ml-4 text-sm">
+                            <li>Sarah Chen recently wrote a LinkedIn post about making payment APIs more intuitive</li>
+                            <li>She transitioned from consulting to product management 5 years ago</li>
+                            <li>She's spoken at 2 conferences about serving underserved markets</li>
+                            <li>She's a Rice alumna (class of 2017)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-semibold mb-2">How to Use This in Your Email:</p>
+                        <div class="bg-gray-900 rounded-lg p-4 text-sm">
+                            <p class="text-gray-400 mb-2">Subject: Rice student interested in fintech PM coffee chat</p>
+                            <p class="mb-2">Dear Sarah,</p>
+                            <p class="mb-2">I hope this email finds you well! My name is [Your Name], and I'm a junior at Rice studying Computer Science and Economics.</p>
+                            <p class="mb-2">I came across your recent LinkedIn post about making payment APIs more intuitive for small businesses - this really resonated with me. I've been exploring a career in product management, specifically focused on making financial tools more accessible.</p>
+                            <p class="mb-2">I admire your path from consulting to PM and would love to learn about how you made that transition. As a fellow Rice alum working in fintech and serving underserved markets, I think you'd have really valuable perspective on the questions I'm exploring.</p>
+                            <p class="mb-2">Do you have 20-30 minutes in the next couple of weeks for a quick virtual coffee chat? I have availability on Mondays, Wednesdays, and Fridays, but I'm happy to work around your schedule.</p>
+                            <p class="mb-2">I appreciate your consideration!</p>
+                            <p class="mb-2">Best,<br>[Your Name]</p>
+                        </div>
+
+                        <div class="mt-4 text-sm">
+                            <p class="font-semibold mb-2 text-rice-gold">What makes this effective:</p>
+                            <ul class="list-none space-y-1 ml-4">
+                                <li>✅ References specific recent work (LinkedIn post)</li>
+                                <li>✅ Shows alignment with their interests (serving underserved markets)</li>
+                                <li>✅ Mentions the Rice connection</li>
+                                <li>✅ Explains why THIS person specifically</li>
+                                <li>✅ Clear, specific ask</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Workflow -->
+        <section id="quick-workflow" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Quick Reference: 30-Minute Research Workflow</h2>
+            <div class="bg-rice-white/10 rounded-lg p-6">
+                <p class="mb-4">Use this when you need to research someone quickly:</p>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="text-rice-gold font-bold text-xl min-w-[100px]">0-5 min</div>
+                        <div>
+                            <p class="font-semibold">Initial Discovery</p>
+                            <p class="text-sm">Research [Person Name] - get overview of current role, background, and interests</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-rice-gold font-bold text-xl min-w-[100px]">5-15 min</div>
+                        <div>
+                            <p class="font-semibold">Deep Dive</p>
+                            <p class="text-sm">Find recent activity (last 6 months), identify 2-3 themes they care about</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-rice-gold font-bold text-xl min-w-[100px]">15-20 min</div>
+                        <div>
+                            <p class="font-semibold">Connection Points</p>
+                            <p class="text-sm">How does MY possibility statement relate to THEIR work? What specific things can I mention in my email?</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-rice-gold font-bold text-xl min-w-[100px]">20-25 min</div>
+                        <div>
+                            <p class="font-semibold">Validation</p>
+                            <p class="text-sm">Is this the RIGHT person to contact? Are there any red flags?</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-rice-gold font-bold text-xl min-w-[100px]">25-30 min</div>
+                        <div>
+                            <p class="font-semibold">Synthesis</p>
+                            <p class="text-sm">Create summary: 3 key facts, 2 recent things to reference, 1 clear reason why contacting them makes sense</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Research Checklist</h2>
+            <div class="bg-rice-white/10 rounded-lg p-6">
+                <p class="mb-4 font-semibold">Before writing your cold email, make sure you can check these boxes:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-rice-gold mb-3">Finding People</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I have 5-10 potential contacts from LinkedIn/network</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've verified they're currently in the role LinkedIn says</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've checked appropriate seniority (not too senior, not too junior)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've prioritized Rice connections where possible</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-rice-gold mb-3">Researching Deeply</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've used ChatGPT to find info beyond their LinkedIn</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've identified 2-3 recent activities (last 6 months)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've found 1-2 connection points to my possibility statement</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I understand why THIS person specifically can help me</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-rice-gold mb-3">Validation</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>This person works in an area relevant to my possibility statement</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>They've shown they're open to sharing (speaking, writing, mentoring)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>No red flags (just changed jobs, on leave, overwhelmed)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I have a SPECIFIC question/topic for them</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-rice-gold mb-3">Ready to Email</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I can explain in 1-2 sentences why I'm reaching out to THEM</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I have specific, recent work of theirs to reference</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I know what tone/approach to use based on their style</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <input type="checkbox" class="mt-1">
+                                <span>I've drafted 2-3 ungoogleable questions for the coffee chat</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Techniques -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Advanced Research Techniques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Cross-Reference Recent Activity</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-8">Copied!</div>
+                        <button onclick="copyPrompt('prompt-8', 'copy-indicator-8')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-8" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I found that [Person's Name] recently [did X thing - gave a talk,
+published an article, launched a project, changed jobs].
+
+Search for more context:
+- Why did they do this?
+- Who else was involved?
+- What problem were they solving?
+- What was the response or outcome?
+- Has there been any follow-up or related work since then?
+
+This will help me ask more informed questions in my coffee chat.</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Compare Multiple People</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-9">Copied!</div>
+                        <button onclick="copyPrompt('prompt-9', 'copy-indicator-9')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-9" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I'm deciding between contacting these 3 people for my coffee chat:
+
+1. [Person A Name] - [Job Title] at [Company]
+2. [Person B Name] - [Job Title] at [Company]
+3. [Person C Name] - [Job Title] at [Company]
+
+My possibility statement: [Brief WHO/WHAT/WHY]
+
+Based on what you can find about each person:
+- Who would be MOST relevant to my specific questions?
+- Who seems most accessible/likely to respond to a student?
+- Who has the most recent, relevant experience?
+
+Rank them and explain your reasoning.</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Find Conversation Topics</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-10">Copied!</div>
+                        <button onclick="copyPrompt('prompt-10', 'copy-indicator-10')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-10" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I'm preparing for a coffee chat with [Person's Name].
+Based on your research:
+
+1. What are 3 SPECIFIC questions I could ask that show I
+   understand their work? (Not generic questions like
+   "How did you get into this field?" but questions that
+   reference their actual projects or experiences)
+
+2. What's ONE thing they're clearly passionate about that I
+   should make sure to ask about?
+
+3. Are there any topics I should avoid? (Recent controversies,
+   failed projects, sensitive company information)
+
+Make the questions open-ended and focused on their personal
+experience.</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples -->
+        <section id="examples" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Example Scenarios</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-rice-blue border-2 border-rice-gold rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold"><i class="fas fa-briefcase mr-2"></i>Scenario 1: Career Path Exploration</h4>
+                    <p class="text-sm mb-3 font-semibold">Possibility Statement:</p>
+                    <ul class="text-sm space-y-1 mb-4 ml-4 list-disc list-inside">
+                        <li><strong>WHO:</strong> Marketing teams at B2B SaaS companies</li>
+                        <li><strong>WHAT:</strong> Data analytics and storytelling for marketing strategy</li>
+                        <li><strong>WHY:</strong> Help companies make better decisions and prove ROI</li>
+                    </ul>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-11">Copied!</div>
+                        <button onclick="copyPrompt('prompt-11', 'copy-indicator-11')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-11" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I'm researching Maya Patel, who is a Marketing Analytics
+Manager at HubSpot.
+
+My possibility statement:
+WHO: Marketing teams at B2B SaaS companies
+WHAT: Data analytics and storytelling for marketing strategy
+WHY: Help companies make better decisions and prove marketing ROI
+
+Please find:
+1. Her current projects at HubSpot (last 6 months)
+2. Her career path into marketing analytics
+3. Any writing, talks, or posts about data-driven marketing
+4. Connection to Rice or Houston (if any)
+5. Whether she's mentioned challenges that relate to my interests
+
+Focus on recent activity that I could reference in a cold email.</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-blue border-2 border-rice-gold rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold"><i class="fas fa-rocket mr-2"></i>Scenario 2: Startup Opportunity</h4>
+                    <p class="text-sm mb-3 font-semibold">Possibility Statement:</p>
+                    <ul class="text-sm space-y-1 mb-4 ml-4 list-disc list-inside">
+                        <li><strong>WHO:</strong> College students planning study abroad trips</li>
+                        <li><strong>WHAT:</strong> AI-powered itinerary tool learning from preferences</li>
+                        <li><strong>WHY:</strong> Help students discover authentic experiences vs tourist traps</li>
+                    </ul>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-12">Copied!</div>
+                        <button onclick="copyPrompt('prompt-12', 'copy-indicator-12')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-12" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I'm researching James Wu, who founded a travel tech startup
+called Wanderly.
+
+My possibility statement:
+WHO: College students planning study abroad trips
+WHAT: AI-powered itinerary tool learning from preferences
+WHY: Help students discover authentic experiences
+
+Please find:
+1. What problem Wanderly is solving and for whom
+2. Their approach to personalization/AI (if any)
+3. James's background before founding Wanderly
+4. Recent interviews/articles about travel tech
+5. Whether they've mentioned challenges with their target market
+6. Any mention of study abroad or student travel specifically
+
+I want to understand whether my idea overlaps with their work or
+fills a different gap.</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section id="troubleshooting" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Troubleshooting</h2>
+
+            <div class="space-y-6">
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Problem: "ChatGPT can't find much information about this person"</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-13">Copied!</div>
+                        <button onclick="copyPrompt('prompt-13', 'copy-indicator-13')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-13" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I'm trying to research [Person Name] but there's limited public information.
+
+Can you:
+1. Verify their current role at [Company]
+2. Search for any company announcements, press releases, or team pages
+   mentioning them
+3. Check if they use a different name professionally or have a maiden name
+4. Look for any alumni profiles or university mentions
+5. Search for their company's recent projects - they might have been involved
+
+If you truly can't find information, should I contact them anyway, or look
+for someone with more public presence?</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Problem: "I found too many interesting people - who should I prioritize?"</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-14">Copied!</div>
+                        <button onclick="copyPrompt('prompt-14', 'copy-indicator-14')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-14" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">I've identified 5 people I could potentially contact. Help me prioritize.
+
+My possibility statement focuses on: [Brief WHO/WHAT/WHY]
+My top questions are: [2-3 key things you want to learn]
+
+Here are my options:
+1. [Person A] - [Title] at [Company]
+2. [Person B] - [Title] at [Company]
+3. [Person C] - [Title] at [Company]
+4. [Person D] - [Title] at [Company]
+5. [Person E] - [Title] at [Company]
+
+Which 2 people would be MOST valuable to talk to first, given my
+specific questions? Explain your reasoning.</pre>
+                    </div>
+                </div>
+
+                <div class="bg-rice-white/10 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-rice-gold">Problem: "The person I want to contact is very senior/busy"</h4>
+                    <div class="prompt-box bg-gray-900 rounded-lg p-4 relative">
+                        <div class="copied-indicator" id="copy-indicator-15">Copied!</div>
+                        <button onclick="copyPrompt('prompt-15', 'copy-indicator-15')" class="copy-btn absolute top-3 right-3 bg-rice-gold text-rice-blue px-2 py-1 rounded text-xs font-semibold hover:bg-rice-gold/90">
+                            Copy
+                        </button>
+                        <pre id="prompt-15" class="text-gray-100 text-xs overflow-x-auto whitespace-pre-wrap pr-16">[Person Name] is a [Senior Title] at [Company]. They seem perfect
+for my questions, but I'm worried they won't have time for a student
+coffee chat.
+
+Based on your research:
+1. Have they shown interest in mentoring or speaking with students?
+2. Are there articles, talks, or posts where they discuss their journey?
+3. Who on their team might be more accessible but still relevant?
+4. Should I contact them directly, or is there someone else at
+   [Company] I should start with?
+
+Help me decide the best approach.</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips and Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Things to Remember</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-rice-blue border-2 border-green-500 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-4 text-green-400"><i class="fas fa-check-circle mr-2"></i>Do's</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Look for RECENT activity (last 3-6 months is most valuable)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Find SPECIFIC things to reference (not just "I read your work")</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Focus on what THEY care about, not just what you want</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Look for surprising connections or shared interests</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Verify information is current (people change jobs, projects end)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400 mt-0.5">✓</span>
+                            <span>Use ChatGPT to synthesize scattered information</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-rice-blue border-2 border-red-500 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-4 text-red-400"><i class="fas fa-times-circle mr-2"></i>Don'ts</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't rely only on their LinkedIn profile</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't ignore contradictions (if info conflicts, dig deeper)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't research in isolation from your possibility statement</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't forget to ask "Is this the RIGHT person to contact?"</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't fabricate connections or exaggerate familiarity</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-0.5">✗</span>
+                            <span>Don't copy-paste the same email to everyone</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-rice-white/10 rounded-lg p-6 mt-6">
+                <h4 class="text-lg font-semibold mb-3 text-rice-gold"><i class="fas fa-shield-alt mr-2"></i>Ethical Considerations</h4>
+                <ul class="space-y-2 text-sm ml-4 list-disc list-inside">
+                    <li>Be transparent that you've done research (that's a GOOD thing - shows you value their time)</li>
+                    <li>Don't claim connections that don't exist</li>
+                    <li>Don't mention personal information that wasn't publicly shared</li>
+                    <li>Don't use ChatGPT-generated content without fact-checking it</li>
+                    <li>If ChatGPT can't find information, don't make it up</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Additional Resources -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-rice-gold">Additional Resources</h2>
+            <div class="bg-rice-white/10 rounded-lg p-6">
+                <p class="mb-4">After using ChatGPT for research, don't forget to:</p>
+                <ol class="list-decimal list-inside space-y-2 ml-4">
+                    <li><strong>Track your outreach:</strong> Use the Contact Tracking spreadsheet</li>
+                    <li><strong>Prepare questions:</strong> Use the "How to Prepare for Your Chats" guide</li>
+                    <li><strong>Write your email:</strong> Use the example in the "Coffee Chat Guide"</li>
+                    <li><strong>Follow up:</strong> If you don't hear back in a week, send a friendly follow-up</li>
+                </ol>
+                <p class="mt-4 text-rice-gold font-semibold">Remember: Cold emailing is a numbers game. If you don't get a response, it's not personal. Keep researching, keep reaching out, and keep refining your approach.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-rice-blue text-rice-white py-8 border-t border-rice-white/20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-semibold text-rice-gold">Rice University</h3>
+                    <p class="text-rice-white">Liu Idea Lab for Innovation and Entrepreneurship</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="mb-1">&copy; 2025 Rice University. All rights reserved.</p>
+                    <p class="text-sm">Last Updated: October 26, 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyPrompt(promptId, indicatorId) {
+            const promptElement = document.getElementById(promptId);
+            const indicatorElement = document.getElementById(indicatorId);
+            const text = promptElement.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                indicatorElement.classList.add('show');
+                setTimeout(() => {
+                    indicatorElement.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
